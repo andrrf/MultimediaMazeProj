@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Maze Runner - Level 1</title>
+    <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+
+    <div id="game-container">
+
+        <header>
+            <h1>Maze Runner</h1>
+        </header>
+
+        <!-- Game Stats -->
+        <div id="stats-panel">
+            <div><p>Level</p><p id="level-display">4</p></div>
+            <div><p>Time Left</p><p id="timer">00:00</p></div>
+            <div><p>Score</p><p id="score-display">0</p></div>
+        </div>
+
+        <!-- Game Area -->
+        <main id="game-area">
+            <canvas id="gameCanvas"></canvas>
+        </main>
+
+        <!-- Controls -->
+        <footer id="controls">
+            <p>Controls</p>
+            <div id="mobile-controls">
+                <p>Keyboard: W A S D or Arrow Keys</p>
+                <button>&uarr;</button>
+                <button>&larr;</button>
+                <button>&darr;</button>
+                <button>&rarr;</button>
+            </div>
+        </footer>
+
+        <!-- Back to Level Menu -->
+        <div id="back-to-menu">
+            <a href="../index.html" class="back-btn">⬅ Back to Level Selection</a>
+        </div>
+
+    </div>
+
+</body>
+</html>
