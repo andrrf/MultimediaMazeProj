@@ -9,80 +9,37 @@
 <body>
 
     <div id="game-container">
-        
-        <!-- Header & Title Section -->
+
         <header>
             <h1>Maze Runner</h1>
-            <p>Navigate the grid and find the exit!</p>
+            <p>Select a level to begin your adventure!</p>
         </header>
 
-        <!-- Game Information Panel (Stats) -->
-        <div id="stats-panel">
-            
-            <div>
-                <p>Level</p>
-                <p id="level">1</p>
-            </div>
-
-            <div>
-                <p>Time Left</p>
-                <p id="timer">00:00</p>
-            </div>
-
-            <div>
-                <p>Score</p>
-                <p id="score">0</p>
-            </div>
+        <div id="level-selection-grid">
+            <a href="mazes/maze1.html" class="level-box">
+                <p>Level 1</p>
+                <span class="status">Play</span>
+            </a>
+            <a href="mazes/maze2.html" class="level-box">
+                <p>Level 2</p>
+                <span class="status">Play</span>
+            </a>
+            <a href="mazes/maze3.html" class="level-box">
+                <p>Level 3</p>
+                <span class="status">Play</span>
+            </a>
+            <a href="mazes/maze4.html" class="level-box">
+                <p>Level 4</p>
+                <span class="status">Play</span>
+            </a>
+            <a href="mazes/maze5.html" class="level-box">
+                <p>Level 5</p>
+                <span class="status">Play</span>
+            </a>
 
         </div>
 
-        <!-- Main Game Canvas Area -->
-        <main id="game-area">
-            <!-- This is where the game will be drawn -->
-            <canvas id="gameCanvas"></canvas>
-            
-            <!-- Message/Modal Overlay -->
-            <div id="messageBox" style="display: none;">
-                <div id="modal-content">
-                    <p id="messageText">Game Paused</p>
-                    <button id="closeMessage">Resume Game</button>
-                </div>
-            </div>
-        </main>
-
-        <!-- Instructions & Mobile Controls -->
-        <footer id="controls">
-            <p>Controls</p>
-            <div id="mobile-controls">
-                <!-- Keyboard instructions for desktop -->
-                <p>Keyboard: W A S D or Arrow Keys</p>
-                
-                <!-- Simple touch controls for mobile users -->
-                <button id="upBtn">&uarr;</button>
-                <button id="leftBtn">&larr;</button>
-                <button id="downBtn">&darr;</button>
-                <button id="rightBtn">&rarr;</button>
-            </div>
-        </footer>
     </div>
 
-     <!-- JavaScript Logic Block - Minimal for now
-    <script>
-        document.addEventListener('DOMContentLoaded', () => {
-            const canvas = document.getElementById('gameCanvas');
-            // This is crucial for the next stage (Canvas API)
-            const ctx = canvas.getContext('2d'); 
-
-            // Basic message box interaction (minimal JS)
-            const messageBox = document.getElementById('messageBox');
-            const closeMessageBtn = document.getElementById('closeMessage');
-
-            closeMessageBtn.addEventListener('click', () => {
-                // In pure CSS/JS, we hide the box by changing the style
-                messageBox.style.display = 'none';
-            });
-        });
-    </script> -->
-    
 </body>
 </html>
