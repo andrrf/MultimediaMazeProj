@@ -1,0 +1,239 @@
+/* ======================================= */
+/* 1. General Layout & Theme */
+/* ======================================= */
+body {
+    flex-direction: column;
+    min-height: 100vh;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    overflow: hidden; 
+    font-family: 'Poppins', sans-serif;
+    background: radial-gradient(circle at top, #1a252f, #0b1015);
+    color: #ecf0f1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* ======================================= */
+/* 2. Home Page Intro Container */
+/* ======================================= */
+#intro-container {
+    background-color: #243447;
+    border-radius: 16px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.5);
+    text-align: center;
+    padding: 40px 70px;
+    width: 100%;
+    max-width: 650px;
+    margin-bottom: 40px;
+}
+
+#intro-container h1 {
+    color: #4bcffa;
+    margin: 0;
+    font-size: 2.6em;
+    text-shadow: 0 0 10px rgba(75, 207, 250, 0.6);
+}
+
+#intro-container p {
+    font-size: 1.1em;
+    color: #d0d3d4;
+    margin-top: 10px;
+}
+
+/* ======================================= */
+/* 3. Level Selection Section */
+/* ======================================= */
+#level-selection-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 25px;
+    width: 100%;
+    max-width: 800px;
+}
+
+.level-box {
+    background-color: #34495e;
+    border-radius: 12px;
+    padding: 30px 20px;
+    text-align: center;
+    text-decoration: none;
+    color: #4bcffa;
+    font-size: 1.2em;
+    font-weight: bold;
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.level-box:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(75, 207, 250, 0.6);
+}
+
+.level-box {
+    display: block;
+    margin-top: 8px;
+    color: #4bcffa;
+    font-weight: bold;
+}
+
+/* ======================================= */
+/* 4. Game Page Container (Maze Pages) */
+/* ======================================= */
+#game-container {
+    width: 95vw;              
+    height: 90vh;             
+    background-color: #243447;
+    border-radius: 16px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.5);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; 
+    align-items: center;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+/* ======================================= */
+/* 5. Game Header and Stats */
+/* ======================================= */
+#game-container header {
+    margin-bottom: 20px;
+}
+
+#game-container h1 {
+    color: #4bcffa;
+    font-size: 1.7em;
+    margin: 0;
+    text-shadow: 0 0 8px rgba(75, 207, 250, 0.5);
+}
+
+#stats-panel {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #1c2a36;
+    padding: 10px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+}
+
+#stats-panel div {
+    flex-direction: column;  
+    align-items: center;  
+    display: flex;  
+}
+
+#stats-panel div p:first-child {
+    font-size: 0.9em;
+    opacity: 0.7;
+    margin: 0px;
+}
+
+#stats-panel div p:last-child {
+    font-size: 1.2em;
+    font-weight: bold;
+    margin: 0px;
+}
+
+#stats-panel {
+    width: 100%;
+    max-width: 600%;
+    height: 40px;
+}
+
+#timer {
+    color: #e74c3c;
+}
+
+#level-display, #score-display {
+    color: #4bcffa;
+}
+
+/* ======================================= */
+/* 6. Maze Area */
+/* ======================================= */
+#game-area {
+    flex: 1;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #101a23;
+    border: 2px solid #4bcffa;
+    border-radius: 8px;
+    overflow: hidden;
+    margin: 10px 0;
+}
+
+/* Simple Maze Design */
+.maze {
+  display: grid;
+  grid-template-columns: repeat(10, 1fr);
+  grid-template-rows: repeat(10, 1fr);
+  width: 100%;
+  height: 100%;
+  border: 2px solid #4bcffa;
+  background-color: #101a23;
+}
+
+.cell {
+  border: 1px solid #243447;
+  background-color: #101a23;
+}
+
+.wall {
+  background-color: #34495e;
+}
+
+.start {
+  background-color: #f1c40f;
+}
+
+.finish {
+  background-color: #e74c3c;
+}
+
+/* ======================================= */
+/* 7. Controls and Back Button */
+/* ======================================= */
+#controls {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #1c2a36;
+    border-radius: 8px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+#controls {
+    height: 40px;
+}
+
+#controls p:first-child {
+    font-weight: bold;
+    color: #4bcffa;
+    margin-bottom: 10px;
+}
+
+#back-to-menu {
+    margin-top: 20px;
+}
+
+.back-btn {
+    display: inline-block;
+    text-decoration: none;
+    background-color: #4bcffa;
+    color: white;
+    padding: 10px 18px;
+    border-radius: 6px;
+    font-weight: bold;
+    transition: background-color 0.2s;
+}
+
+.back-btn:hover {
+    background-color: #3498db;
+}
